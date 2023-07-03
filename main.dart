@@ -70,7 +70,8 @@ class _EmotionAnalyzerHomePageState extends State<EmotionAnalyzerHomePage> {
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black),
             ),
-            // TODO: Display the captured photo here
+            child: Image.asset(
+                '/Users/vibhanshubhagat/Desktop/masti.jpg'), // Replace 'path_to_masti.jpg' with the actual path to the image on your desktop
           ),
           SizedBox(height: 40),
           Row(
@@ -95,7 +96,10 @@ class _EmotionAnalyzerHomePageState extends State<EmotionAnalyzerHomePage> {
               ),
             ],
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 5),
+          SizedBox(
+              height:
+                  40), // Increase the space between the previous text and this text
           Text(
             'You look$emotionOutput _____ today!',
             style: TextStyle(
@@ -103,12 +107,42 @@ class _EmotionAnalyzerHomePageState extends State<EmotionAnalyzerHomePage> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          Text(
-            'Incorrect? Retake Photo',
-            style: TextStyle(
-              color: Colors.redAccent,
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
+          SizedBox(
+              height:
+                  20), // Increase the space between the previous text and this text
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Incorrect?',
+                style: TextStyle(
+                  color: Colors.redAccent,
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(width: 8),
+              ElevatedButton(
+                onPressed: capturePhoto,
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.redAccent,
+                ),
+                child: Text('Retake Photo'),
+              ),
+            ],
+          ),
+          SizedBox(
+              height:
+                  20), // Increase the space between the previous text and this text
+          Center(
+            // Center align the following text
+            child: Text(
+              'Connect with our Chatbot/Therapist Now!',
+              style: TextStyle(
+                color: Colors.black, // Set the color explicitly
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ],
