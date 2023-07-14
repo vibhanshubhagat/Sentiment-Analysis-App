@@ -185,9 +185,11 @@ class _EmotionAnalyzerHomePageState extends State<EmotionAnalyzerHomePage> {
                 height:
                     40), // Increase the space between the previous text and this text
             Text(
-              emotionOutput.isNotEmpty ? 'You look $emotionOutput today!' : "",
+              emotionOutput.isNotEmpty
+                  ? 'Your Emotion(s): $emotionOutput!'
+                  : "",
               style: TextStyle(
-                fontSize: 28,
+                fontSize: 26,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -198,10 +200,10 @@ class _EmotionAnalyzerHomePageState extends State<EmotionAnalyzerHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Incorrect?',
+                  'Incorrect?Move closer to camera',
                   style: TextStyle(
                     color: Colors.redAccent,
-                    fontSize: 22,
+                    fontSize: 15,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
